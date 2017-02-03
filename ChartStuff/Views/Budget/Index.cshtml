@@ -1,0 +1,18 @@
+﻿@model ChartStuff.Controllers.BudgetIndexViewModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>Total Expenses: $@Model.TotalExpenses</p>
+
+<p>Total Income: $@Model.TotalIncome</p>
+
+<ul>
+    @foreach (var expense in Model.Budget.Expenses)
+    {
+        <li>@expense.Name: @expense.Amount</li>
+    }
+</ul>
+
